@@ -18,4 +18,4 @@ then
     /usr/bin/docker rm "$word"
 fi
 /ccj/apache-maven-3.6.3/bin/mvn clean install  docker:build
-/usr/bin/docker run -p 8081:8079 -d  "$appName":latest
+/usr/bin/docker run -p 8081:8079 -d --name "$appName" "$appName":latest
