@@ -1,4 +1,4 @@
-appName="spring-boot/demo"
+appName="ccj"
 word="1"
 echo "$word"
 word=`docker ps -a -q --no-trunc --filter name=^/"$appName"$`
@@ -17,5 +17,5 @@ then
     /usr/bin/docker stop "$word"
     /usr/bin/docker rm "$word"
 fi
-/ccj/apache-maven-3.6.3/bin/mvn clean package -P spring-boot docker:build
+/ccj/apache-maven-3.6.3/bin/mvn clean package  docker:build
 /usr/bin/docker run -p 8081:8079 -d --name "$appName" "$appName":latest
