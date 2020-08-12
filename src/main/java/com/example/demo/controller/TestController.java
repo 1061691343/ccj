@@ -7,6 +7,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class TestController {
     @RequestMapping("/hello")
     public  String abc(){
-        return "鼎业机械123";
+        return "鼎业的机械123";
     }
 }
